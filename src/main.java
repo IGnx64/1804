@@ -1,15 +1,16 @@
-import java.util.Scanner;
+import com.My_Calculator;
 
-class Sum {
-    public static void main(String [] args) {
-        Scanner scan = new Scanner(System.in);
+import java.util.ArrayList;
+import java.util.HashMap;
 
-        System.out.print("Введите первое число A = ");
-        int a = scan.nextInt();
-        System.out.print("Введите второе число B = ");
-        int b = scan.nextInt();
-        System.out.print("Введите третье число C = ");
-        int c = scan.nextInt();
-        System.out.println("A + B + C = " + ( a + b + c ));
+
+public class Main {
+    public static void main(String[] args) {
+        int a=10;
+        int b=23;
+        My_Calculator my_calculator = new My_Calculator();
+        my_calculator.multiplication(a,b);
+        my_calculator.delenie(a,b);
+        my_calculator.subtraction(a,b);
     }
 }
