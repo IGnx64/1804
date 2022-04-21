@@ -1,15 +1,32 @@
+package lab2;
+
+import java.util.Random;
 import java.util.Scanner;
 
-class Sum {
-    public static void main(String [] args) {
-        Scanner scan = new Scanner(System.in);
+public class Main
+{
+    public static void main(String[] args)
+    {
+        int compNumber = random();
+        int humanNumber = scan();
+        if (humanNumber == compNumber) {
+            System.out.println("Вы выиграли!");
+        } else {
+            System.out.println("Вы проиграли!");
+            System.out.println("Было загадано число " + compNumber);
+        }
+    }
 
-        System.out.print("Введите первое число A = ");
-        int a = scan.nextInt();
-        System.out.print("Введите второе число B = ");
-        int b = scan.nextInt();
-        System.out.print("Введите третье число C = ");
-        int c = scan.nextInt();
-        System.out.println("A + B + C = " + ( a + b + c ));
+    public static int random()
+    {
+        Random newRandom = new Random();
+        return newRandom.nextInt(10) + 1;
+    }
+
+    public static int scan()
+    {
+        System.out.println("Input number from 1 to 10");
+        Scanner scanner = new Scanner(System.in);
+        return scanner.nextInt();
     }
 }
